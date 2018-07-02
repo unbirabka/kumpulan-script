@@ -1,7 +1,16 @@
 # artifactory query leanguage
 ## contoh query dengan curl
+**contoh-1 tanpa file pom.xml**
 ```
-curl -u username:password -i -X POST "http://artifactory_host:8081/artifactory/api/search/aql" -H "Content-Type: text/plain" -d 'items.find({ "name": {"$match" : "rest-web*.jar"}, "name": {"$nmatch": "rest-web-NaN*.jar"}, "name": {"$nmatch": "rest-web-*sources.jar"}, "name": {"$nmatch": "rest-web-*javadoc.jar"}, "path": {"$match": "com/apps/slip/auth/rest-web/*"}, "path": {"$nmatch": "com/apps/slip/auth/rest-web/*SNAP*"}})'
+curl -u username:password -i -X POST "http://artifactory_host:8081/artifactory/api/search/aql" -H "Content-Type: text/plain" -d 'items.find({ "name": {"$match" : "rest-web*.jar"}, "name": {"$nmatch": "rest-web-NaN*.jar"}, "name": {"$nmatch": "rest-web-*sources.jar"}, "name": {"$nmatch": "rest-web-*javadoc.jar"}, "path": {"$match": "com/sekolahlinux/auth/rest-web/*"}, "path": {"$nmatch": "com/sekolahlinux/auth/rest-web/*NaN*"}})'
+```
+**contoh-2 dengan file pom.xml**
+```
+curl -s -u username:password -i -X POST "http://artifactory_host:8081/artifactory/api/search/aql" -H "Content-Type: text/plain" -d 'items.find({ "name": {"$match" : "rest-web*.jar"}, "name": {"$nmatch": "rest-web-NaN*.jar"}, "name": {"$nmatch": "rest-web-*sources.jar"}, "name": {"$nmatch": "rest-web-*javadoc.jar"}, "path": {"$match": "'`cat pom.xml|grep -m 1 "groupId"|awk -F ">" {'print $2'}|awk -F "<" {'print $1'}|sed 's/\./\//g'`'/*"}, "path": {"$nmatch": "'`cat pom.xml|grep -m 1 "groupId"|awk -F ">" {'print $2'}|awk -F "<" {'print $1'}|sed 's/\./\//g'`'/*model*"}, "repo": {"$eq": "libs-release-local"}})'|grep name|awk -F "\"" {'print $4'}|awk -F"\.jar" {'print $1'}|sed 's/rest-web-//g'
+```
+**atau**
+```
+curl -s -u username:password -X POST -H "Content-Type: text/plain" -d 'items.find({"name":{"$match":"rest-web*.jar"}, "name":{"$nmatch":"rest-web*javadoc.jar"}, "name":{"$nmatch":"rest-web*sources.jar"}, "path":{"$match":"'`cat pom.xml | grep -E -m 1 -o "<groupId>(.*)</groupId>" | cut -d \> -f 2 | cut -d \< -f 1 | sed -e 's/\./\//g'`'/rest-web/*"}})' http://artifactory_host:8081/artifactory/api/search/aql
 ```
 
 ## link belajar artifactory
