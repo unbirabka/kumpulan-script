@@ -12,22 +12,25 @@ atau bisa juga dengan active choice paramater & active choices reactive paramete
 * **active choice paramater (groovy script)**
 ```
 return [
-'TIX-API-PROMOCODE',
-'TIX-CALENDAR-BE',
-'TIX-GATEWAY',
+'SEKOLAHLINUX1',
+'SEKOLAHLINUX2',
+'SEKOLAHLINUX3',
 ]
 ```
 * **active choice reactive paramater (groovy script)**
 ```
-if (projects.equals("TIX-API-PROMOCODE")) {
-  return ["tiket-tix-api-promocode-allt.sh"]
-} else if (projects.equals("TIX-CALENDAR-BE")) {
-  return ["tiket-tix-calendar-be-allt.sh"]
-} else if (projects.equals("TIX-GATEWAY")) {
-  return ["tiket-tix-gateway-all.sh"]
+if (projects.equals("SEKOLAHLINUX1")) {
+  return ["sekolahlinux1.sh"]
+} else if (projects.equals("SEKOLAHLINUX2")) {
+  return ["sekolahlinux2.sh"]
+} else if (projects.equals("SEKOLAHLINUX3")) {
+  return ["sekolahlinux3.sh"]
 } else {
   return ["Unknown state"];
 }
 ```
+
+untuk detailnya kamu bisa mengunjungi link plugin active choices parameter untuk jenkin dibawah
+* **[https://wiki.jenkins.io/display/JENKINS/Active+Choices+Plugin](active choices parameter)**
 
 
