@@ -1,4 +1,5 @@
-## jika kita ingin mendapatkan output dynamic dan berubah-ubah pada  active choices parameter, kita bisa memanfaatkan groovy script, dari groovy ini kita bisa memerintahkan untuk mengeksekusi script bash, yang outputnya bisa kita manfaatkan untuk digunakan sebagai value dari variable name/title active choices parameter**
+## active choice paramater only
+**jika kita ingin mendapatkan output dynamic dan berubah-ubah pada  active choices parameter, kita bisa memanfaatkan groovy script, dari groovy ini kita bisa memerintahkan untuk mengeksekusi script bash, yang outputnya bisa kita manfaatkan untuk digunakan sebagai value dari variable name/title active choices parameter**
 * **active choice paramater (groovy script)**
 ```
 tags = [];
@@ -6,7 +7,9 @@ text = "/home/ubuntu/script_bash.sh".execute().text;
 text.eachLine { tags.push(it) };
 return tags;
 ```		
-## atau bisa juga dengan active choice paramater & active choices reactive parameter**
+## active choice paramater & active choices reactive parameter
+**atau bisa juga dengan active choice paramater & active choices reactive parameter**
+
 * **active choice paramater (groovy script)**
 ```
 return [
@@ -15,6 +18,7 @@ return [
 'TIX-GATEWAY',
 ]
 ```
+
 * **active choice reactive paramater (groovy script)**
 ```
 if (projects.equals("TIX-API-PROMOCODE")) {
@@ -26,5 +30,6 @@ if (projects.equals("TIX-API-PROMOCODE")) {
 } else {
   return ["Unknown state"];
 }
-
 ```
+
+
