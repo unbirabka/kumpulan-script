@@ -2,7 +2,7 @@
 ENVIRONMENT="production"
 WORKING_DIR="/home/ubuntu"
 APP="auth-service-$ENVIRONMENT-all.jar"
-APP_NAME="awantunai-auth-service"
+APP_NAME="sekolahlinux-auth-service"
 APP_JAR="$WORKING_DIR/$APP_NAME/$APP"
 LOG_DIR="/mnt/nfs/logs/auth-service"
 
