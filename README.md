@@ -6,4 +6,4 @@ didalam sini berisikan script-script untuk menunjang keperluan sysadm
 
 ## tutorial singkat
 * **[jenkins build with parameter plugin active choice paramater & active choices reactive parameter](https://github.com/akbaribnu/kumpulan-script/blob/master/jenkins-build-with-parameter.md)**
-* **[how to use aql "artifactory query lenguage with curl](https://github.com/akbaribnu/kumpulan-script/blob/master/query-artifactory-with-aql.md)**
+* **[how to use aql "artifactory query lenguage" with curl](https://github.com/akbaribnu/kumpulan-script/blob/master/query-artifactory-with-aql.md)**
