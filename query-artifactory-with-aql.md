@@ -14,7 +14,7 @@ curl -s -u username:password -X POST -H "Content-Type: text/plain" -d 'items.fin
 ```
 * **contoh-3 parsing menggunakan jq**
 ```
-curl -s -u jenkins:jenkins@123 -X POST "http://13.228.24.146:8081/artifactory/api/search/aql" -H "Content-Type: text/plain" -d 'items.find({ "name": {"$match" : "rest-web*.jar"}, "name": {"$nmatch": "rest-web-NaN*.jar"}, "name": {"$nmatch": "rest-web-*sources.jar"}, "name": {"$nmatch": "rest-web-*javadoc.jar"}, "path": {"$match": "'`cat pom.xml|grep -m 1 "groupId"|awk -F ">" {'print $2'}|awk -F "<" {'print $1'}|sed 's/\./\//g'`'/*"}, "path": {"$nmatch": "'`cat pom.xml|grep -m 1 "groupId"|awk -F ">" {'print $2'}|awk -F "<" {'print $1'}|sed 's/\./\//g'`'/*model*"}, "repo": {"$eq": "libs-release-local"}})'|jq .results|jq 'sort_by(.updated)'|jq reverse|grep -m 3 "name"|awk -F "\"" {'print $4'}|sed 's/rest-web-//g'|sed 's/.jar//g'
+curl -s -u username:password -X POST "http://artifactory_host:8081/artifactory/api/search/aql" -H "Content-Type: text/plain" -d 'items.find({ "name": {"$match" : "rest-web*.jar"}, "name": {"$nmatch": "rest-web-NaN*.jar"}, "name": {"$nmatch": "rest-web-*sources.jar"}, "name": {"$nmatch": "rest-web-*javadoc.jar"}, "path": {"$match": "'`cat pom.xml|grep -m 1 "groupId"|awk -F ">" {'print $2'}|awk -F "<" {'print $1'}|sed 's/\./\//g'`'/*"}, "path": {"$nmatch": "'`cat pom.xml|grep -m 1 "groupId"|awk -F ">" {'print $2'}|awk -F "<" {'print $1'}|sed 's/\./\//g'`'/*model*"}, "repo": {"$eq": "libs-release-local"}})'|jq .results|jq 'sort_by(.updated)'|jq reverse|grep -m 3 "name"|awk -F "\"" {'print $4'}|sed 's/rest-web-//g'|sed 's/.jar//g'
 ```
 
 ## link belajar artifactory
