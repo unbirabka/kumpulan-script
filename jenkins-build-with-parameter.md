@@ -6,8 +6,8 @@ text = "/home/ubuntu/script_bash.sh".execute().text;
 text.eachLine { tags.push(it) };
 return tags;
 ```		
-* **atau bisa juga dengan active choice paramater & active choices reactive parameter**
-**active choice paramater (groovy script)**
+**atau bisa juga dengan active choice paramater & active choices reactive parameter**
+* **active choice paramater (groovy script)**
 ```
 return [
 'TIX-API-PROMOCODE',
@@ -15,8 +15,7 @@ return [
 'TIX-GATEWAY',
 ]
 ```
-
-**active choice reactive paramater (groovy script)**
+* **active choice reactive paramater (groovy script)**
 ```
 if (projects.equals("TIX-API-PROMOCODE")) {
   return ["tiket-tix-api-promocode-allt.sh"]
