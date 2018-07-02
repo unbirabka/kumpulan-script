@@ -8,4 +8,4 @@ curl -u username:password -i -X POST "http://artifactory_host:8081/artifactory/a
 * **[curl aql and content type header](https://jfrog.com/knowledge-base/aql-and-content-type-headers/)**
 * **[artifactory query leanguage details](https://www.jfrog.com/confluence/display/RTF/Artifactory+Query+Language)**
 * **[aql comparison operator](https://www.jfrog.com/confluence/display/RTF/Artifactory+Query+Language#ArtifactoryQueryLanguage-ComparisonOperators)**
-* **[aql entities field](https://www.jfrog.com/confluence/display/RTF/Artifactory+Query+Language#ArtifactoryQueryLanguage-EntitiesandFields)
+* **[aql entities field](https://www.jfrog.com/confluence/display/RTF/Artifactory+Query+Language#ArtifactoryQueryLanguage-EntitiesandFields)**
