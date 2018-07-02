@@ -31,6 +31,6 @@ if (projects.equals("SEKOLAHLINUX1")) {
 ```
 
 untuk detailnya kamu bisa mengunjungi link plugin active choices parameter untuk jenkin dibawah
-* **[https://wiki.jenkins.io/display/JENKINS/Active+Choices+Plugin](active choices parameter)**
+* **[active choices parameter](https://wiki.jenkins.io/display/JENKINS/Active+Choices+Plugin)**
 
 
