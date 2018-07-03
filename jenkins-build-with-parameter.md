@@ -34,6 +34,7 @@ if (projects.equals("SEKOLAHLINUX1")) {
 pada sample ini saya ingin agar ketika memilih suatu project maka akan muncul version jar release dari artifactory, serta muncul nama file shell untuk menjalankan ansible
 
 **name: projects**
+
 **type: active choice paramater**
 * Groovy Script
 ```
@@ -48,6 +49,7 @@ return ['Error’]
 ```
 
 **name: version**
+
 **type: active choice reactive paramater-1**
 * Groovy Script
 ```
@@ -74,6 +76,7 @@ projects
 
 
 **name: ansible**
+
 **type: active choice reactive paramater-2**
 * Groovy Script
 ```
