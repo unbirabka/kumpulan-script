@@ -33,6 +33,7 @@ if (projects.equals("SEKOLAHLINUX1")) {
 ## other sample build with paramater with pipeline
 pada sample ini saya ingin agar ketika memilih suatu project maka akan muncul version jar release dari artifactory, serta muncul nama file shell untuk menjalankan ansible
 
+
 **name: projects**
 
 **type: active choice paramater**
@@ -47,6 +48,7 @@ return [
 ```
 return ['Error’]
 ```
+
 
 **name: version**
 
@@ -72,6 +74,7 @@ if (projects.equals("SEKOLAHLINUX1")) {
 return ['Error’]
 ```
 * Referenced parameters (projects)
+
 
 
 **name: ansible**
