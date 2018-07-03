@@ -71,8 +71,7 @@ if (projects.equals("SEKOLAHLINUX1")) {
 ```
 return ['Error’]
 ```
-* Referenced parameters
-projects
+* Referenced parameters (projects)
 
 
 **name: ansible**
@@ -92,8 +91,7 @@ if (projects.equals("SEKOLAHLINUX1")) {
 ```
 return ['Error’]
 ```
-* Referenced parameters
-projects
+* Referenced parameters (projects)
 
 
 **type: pipeline groovy script**
